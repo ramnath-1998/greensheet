@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import NavbarMain from './components/Navbarmain';
+import 'bulma/css/bulma.min.css';
+import Home from './pages/Home'
+import Allbonds from './pages/AllBonds';
+import Allprojects from './pages/AllProjects'
+import { Routes, Route } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Row } from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+
+
+    <div className='main'>
+      <Row>
+      <NavbarMain></NavbarMain>
+      </Row>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="bonds" element={<Allbonds />} />
+        <Route path="projects" element={<Allprojects />} />
+
+      </Routes>
     </div>
+
+
+
   );
 }
 
