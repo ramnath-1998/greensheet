@@ -1,69 +1,25 @@
-import React, { useState } from 'react';
-import {
-  MDBNavbar,
-  MDBContainer,
-  MDBIcon,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBDropdown,
-  MDBDropdownMenu,
-  MDBDropdownToggle,
-  MDBDropdownItem,
-} from 'mdb-react-ui-kit';
+import React from 'react'
+import { Col, Row } from 'react-bootstrap'
+import Navbarleft from './Navbarleft'
+import Navbarright from './Navbarright'
 
-export default function App() {
-  const [showNavCentred, setShowNavCentred] = useState(false);
-
+const Navbarmain = () => {
   return (
-    <div className='navbar'>
-      <MDBNavbar expand='lg' light bgColor='light'>
-        <MDBContainer fluid>
-          <MDBNavbarToggler
-            type='button'
-            data-target='#navbarCenteredExample'
-            aria-controls='navbarCenteredExample'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-            onClick={() => setShowNavCentred(!showNavCentred)}
-          >
-            <MDBIcon icon='bars' fas />
-          </MDBNavbarToggler>
+    <div className='navbargreensheet'>
+      <Row className='justify-content-center'>
+        <Col className='col-md-8'>
 
-          <MDBCollapse navbar show={showNavCentred} center id='navbarCenteredExample'>
-            <MDBNavbarNav fullWidth={false} className='mb-2 mb-lg-0'>
-              <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='#'>
-                  Home
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Link</MDBNavbarLink>
-              </MDBNavbarItem>
+          <Navbarleft></Navbarleft>
 
-              <MDBNavbarItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle tag='a' className='nav-link'>
-                    Dropdown
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu>
-                    <MDBDropdownItem link>Action</MDBDropdownItem>
-                    <MDBDropdownItem link>Another action</MDBDropdownItem>
-                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
-                  Disabled
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-            </MDBNavbarNav>
-          </MDBCollapse>
-        </MDBContainer>
-      </MDBNavbar>
+        </Col>
+
+        <Col className='col-md-4'>
+          <Navbarright></Navbarright>
+        </Col>
+
+      </Row>
     </div>
-  );
+  )
 }
+
+export default Navbarmain

@@ -7,7 +7,7 @@ import Allprojects from './pages/AllProjects'
 import { Routes, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 
 function App() {
@@ -17,10 +17,14 @@ function App() {
 
 
     <div className='main'>
-      <Row>
-        <div className="container-fluid w-100 indigo">
+        <Row className='justify-content-center'>
+        <Col className='col-md-6 align-self-center headergreensheet'>
+        </Col>
+      </Row>
+      <Row className='justify-content-center'>
+        <Col className='col-md-8 align-self-center'>
           <NavbarMain></NavbarMain>
-        </div>
+        </Col>
       </Row>
       <Routes>
         <Route path="/" element={<Home />} />
