@@ -1,71 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react';
+import {
+  MDBNavbar,
+  MDBContainer,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBDropdown,
+  MDBDropdownMenu,
+  MDBDropdownToggle,
+  MDBDropdownItem,
+} from 'mdb-react-ui-kit';
 
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+export default function App() {
+  const [showNavCentred, setShowNavCentred] = useState(false);
 
-
-const NavbarMain = () => {
   return (
     <div className='navbar'>
-      <Navbar bg="light" expand="lg">
-        <Container fluid>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '500px' }}
-              navbarScroll
-            >
-              <Nav.Link href="#action1">Home</Nav.Link>
+      <MDBNavbar expand='lg' light bgColor='light'>
+        <MDBContainer fluid>
+          <MDBNavbarToggler
+            type='button'
+            data-target='#navbarCenteredExample'
+            aria-controls='navbarCenteredExample'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+            onClick={() => setShowNavCentred(!showNavCentred)}
+          >
+            <MDBIcon icon='bars' fas />
+          </MDBNavbarToggler>
 
+          <MDBCollapse navbar show={showNavCentred} center id='navbarCenteredExample'>
+            <MDBNavbarNav fullWidth={false} className='mb-2 mb-lg-0'>
+              <MDBNavbarItem>
+                <MDBNavbarLink active aria-current='page' href='#'>
+                  Home
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+              </MDBNavbarItem>
 
-
-              <NavDropdown title="Projects" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">
-                  All Projects
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Add Project
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-
-                  Search a Project
-
-                </NavDropdown.Item>
-              </NavDropdown>
-
-
-
-              <NavDropdown title="Bonds" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">
-                  All Bonds
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Add Bond
-                </NavDropdown.Item>
-                {/* <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item> */}
-              </NavDropdown>
-              {/* <Nav.Link href="#" disabled>
-                Link
-              </Nav.Link> */}
-            </Nav>
-              
-              <Button variant="outline-success">Ask a Question</Button>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-
+              <MDBNavbarItem>
+                <MDBDropdown>
+                  <MDBDropdownToggle tag='a' className='nav-link'>
+                    Dropdown
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem link>Action</MDBDropdownItem>
+                    <MDBDropdownItem link>Another action</MDBDropdownItem>
+                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
+                  Disabled
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+            </MDBNavbarNav>
+          </MDBCollapse>
+        </MDBContainer>
+      </MDBNavbar>
     </div>
-  )
+  );
 }
-
-export default NavbarMain

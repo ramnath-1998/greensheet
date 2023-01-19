@@ -1,16 +1,17 @@
 import React from 'react'
-import { Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import BondCard from '../components/BondCard'
 import BondTable from '../components/BondTable'
 
 const AllBonds = () => {
   return (
-    <Row>
-      <div className='bondcardspage'>
-        {/* <BondCard></BondCard> */}
+    <Row className='d-flex justify-content-center'>
 
+      {/* <BondCard></BondCard> */}
+
+      <Col className='bg-white mt-5 d-flex justify-content-center '>
         <BondTable></BondTable>
-      </div>
+      </Col>
     </Row>
   )
 }

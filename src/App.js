@@ -18,13 +18,15 @@ function App() {
 
     <div className='main'>
       <Row>
-      <NavbarMain></NavbarMain>
+        <div className="container-fluid w-100 indigo">
+          <NavbarMain></NavbarMain>
+        </div>
       </Row>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="bonds" element={<Allbonds />} />
         <Route path="projects" element={<Allprojects />} />
-
+        <Route path="projects/:id" element={<Allprojects />} />
       </Routes>
     </div>
 
