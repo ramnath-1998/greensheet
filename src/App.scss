@@ -97,3 +97,137 @@
   width: auto;
   align-items: center;
 }
+
+
+
+
+body{
+  background-color:lavender;
+  text-align: center;
+  background-image:url(Images/background.jpg);
+  background-repeat: repeat
+  }
+  h1{
+      font-style: normal;
+      size: 40px;
+      color: #f08080;
+      }
+  h2{
+  font-style: italic;
+  size: 30px;
+  color: #f08080;
+  }
+  h3{
+      font-style: normal;
+      size: 20px;
+      color:white;
+      }
+  p{
+  font-size: 20px;
+  }
+  .container {
+      margin: auto;
+      width: 60%;
+      /*border: 3px solid green;*/
+      padding: 10px;
+    }
+
+    /*Header*/
+    .header{
+      margin: auto;
+      width: 80%;
+      height: 100px;
+      margin-top: 50px;
+      background-color: rgb(102, 157,52);
+    }
+    .header .header-left{
+     float:left;
+     width: 60%;
+    }
+    .header .header-right{
+      float:right;
+     width: 40%;
+     text-align: left;
+     vertical-align: middle;
+     height: 100%;
+    }
+    .header .header-right h1{
+      color: white;
+      padding-top: 8px;
+    }
+
+    /*body*/
+    .content-main{
+      margin: auto;
+      height: 500px;
+      width: 80%;
+      background-color:rgb(56, 87,26);
+    }
+  /*navbar*/
+  .navbar{
+      height: 70px;
+      width: 100%;
+      background-color:rgb(205, 232,181);
+    }
+    .navbar .nav-left{
+      float: left;
+      width:70%;
+      height: 100%;
+    }
+    .navbar .nav-left ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      margin-top: 11px;
+      background-color: rgb(205, 232,181);
+    }
+    .navbar .nav-left li {
+      display: inline;
+      float: left;
+      border-right: 1px solid #bbb;
+      border-left: 1px solid #bbb;
+      border-radius: 30px;
+    }
+    .navbar .nav-left li:last-child
+    {
+      /*border-right: none;*/
+      border-right: 1px solid #bbb;
+    }
+    .navbar .nav-left a{
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 40px;
+      text-decoration: none;
+      background-color: #333;
+      border-radius: 30px;
+    }
+    .navbar .nav-left a:hover
+    {
+      background-color: #111;
+      border-radius: 30px;
+    }
+
+    .navbar .nav-right{
+      float: right;
+      width:30%;
+      height: 100%;
+      background-color:rgb(205, 232,181);;
+    }
+    .navbar .nav-right input{
+      border: 2px solid black;
+          border-radius: 14px;
+          padding: 3px 17px;
+          width: 129px;
+          margin-top: 20px;
+    }
+  /*content*/
+  /*bottom*/
+
+    /*footer*/
+    .footer{
+      height: 70px;
+      width: 100%;
+      background-color: rgb(255, 140,130);
+    }
