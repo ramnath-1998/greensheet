@@ -177,15 +177,43 @@ p {
   align-items: center;
   height: 70px;
   background-color: rgb(205, 232, 181);
-  
-  
+
+
   .nav-left-greensheet {
 
     background: white;
     height: 70px;
-  
+
+
+
+    .nav-left-button-greensheet{
+
+      background: black;
+      height:100%;
+      width:20%;
+      justify-content: center;
+      color: white;
+      align-items: center;
+      vertical-align: middle;
+      text-align: center;
+      display:inline-block;
+
+    }
+    .nav-button-text{
+      text-align: center;
+      vertical-align: middle;
+      margin-top: 15%;
+    }
+    .nav-left-button-greensheet:hover{
+
+      background: white;
+      color: green;
+
+    }
+
+
   }
-  
+
   .nav-right-greensheet {
     background:rgb(255, 136, 0);
     height: 70px;

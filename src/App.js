@@ -21,17 +21,21 @@ function App() {
         <Col className='col-md-6 align-self-center headergreensheet'>
         </Col>
       </Row>
+
       <Row className='justify-content-center'>
         <Col className='col-md-8 align-self-center'>
           <NavbarMain></NavbarMain>
         </Col>
+
       </Row>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="bonds" element={<Allbonds />} />
         <Route path="projects" element={<Allprojects />} />
         <Route path="projects/:id" element={<Allprojects />} />
       </Routes>
+
     </div>
 
 
